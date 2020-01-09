@@ -21,7 +21,7 @@ describe "Scraper" do
  :bio=>
   "I'm a southern California native seeking to find work as a full stack web developer. I enjoying tinkering with computers and learning new things!"}}
 
-  describe "#scrape_index_page" do
+  describe ".scrape_index_page" do
     it "is a class method that scrapes the student index page ('./fixtures/student-site/index.html') and a returns an array of hashes in which each hash represents one student" do
       index_url = "https://learn-co-curriculum.github.io/student-scraper-test-page/index.html"
       scraped_students = Scraper.scrape_index_page(index_url)
@@ -32,7 +32,7 @@ describe "Scraper" do
     end
   end
 
-  describe "#scrape_profile_page" do
+  describe ".scrape_profile_page" do
     it "is a class method that scrapes a student's profile page and returns a hash of attributes describing an individual student" do
       profile_url = "https://learn-co-curriculum.github.io/student-scraper-test-page/students/joe-burgess.html"
       scraped_student = Scraper.scrape_profile_page(profile_url)
